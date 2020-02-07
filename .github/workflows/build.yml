@@ -1,6 +1,13 @@
 name: CI
 
-on: [push, pull_request]
+# Trigger on pull_request or on push to master
+on:
+  create:
+    tags:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   build:
