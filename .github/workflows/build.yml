@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-16.04, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest]
     steps:
     - uses: actions/setup-python@v1
       with:
@@ -18,7 +18,7 @@ jobs:
         submodules: true
     - name: install ninja (linux)
       run: sudo apt-get install ninja-build
-      if: matrix.os == 'ubuntu-16.04'
+      if: matrix.os == 'ubuntu-latest'
     - name: install ninja (osx)
       run: brew install ninja
       if: matrix.os == 'macos-latest'
