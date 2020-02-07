@@ -39,4 +39,4 @@ jobs:
     - name: build
       run: cmake --build out
     - name: test
-      run: python check.py --binaryen-bin=out/install/bin
+      run: python check.py --binaryen-bin=out/bin
