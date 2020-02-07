@@ -28,7 +28,7 @@ jobs:
     - name: mkdir
       run: mkdir -p out
     - name: cmake
-      run: cmake -S . -B out
+      run: cmake -S . -B out -G Ninja
     - name: build
       run: cmake --build out
     - name: test
